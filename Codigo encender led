@@ -1,0 +1,28 @@
+int led=13; //declaro el pin que quiero como salida del led
+void setup() {
+  // put your setup code here, to run once:
+
+pinMode(led,OUTPUT);//declaro como quiero que sea ese pin (entrada)
+}
+
+void loop() {
+for (int i=0;i<=5;i++){ //cuantas veces quiero que se encianda el led y se apage 
+digitalWrite(led,HIGH);
+delay(500); 
+for  (int j=0;j<i;j++){ //parpadeo del led mas rapido 
+digitalWrite(led,LOW);
+delay(200);
+digitalWrite(led,HIGH);
+delay(200);
+}
+digitalWrite(led,LOW);
+delay(500);
+}
+digitalWrite(led,HIGH);//apago y luego enciendo el led como ultima rutina
+delay (2000);
+digitalWrite(led,LOW);
+delay(100000);
+
+  // put your main code here, to run repeatedly:
+
+}
